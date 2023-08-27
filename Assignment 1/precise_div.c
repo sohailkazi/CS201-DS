@@ -2,7 +2,6 @@
   
 void precisionCompute(int x, int y, int n)
 {
-    // Base cases
     if (y == 0) {
         printf("Division by Zero error\n");
         return;
@@ -22,9 +21,6 @@ void precisionCompute(int x, int y, int n)
         y = y > 0 ? y : -y;
     }
     int d = x / y;
-  
-    // Now one by print digits after dot
-    // using school division method.
     for (int i = 0; i <= n; i++) {
         printf("%d", d);
         x = x - (y * d);
@@ -36,8 +32,7 @@ void precisionCompute(int x, int y, int n)
             printf(".");
     }
 }
-  
-// Driver Program
+
 int main()
 {
     printf("Enter x: ");
