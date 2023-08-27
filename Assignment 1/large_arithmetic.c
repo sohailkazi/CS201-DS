@@ -30,7 +30,6 @@ int main()
         divisor += (numberTwo[i] - '0') * prod;
         prod *= 10; 
     }
-
     addNumbers(numberOne, numberTwo);
     printProduct(numberOne, numberTwo);
     printDivision(numberOne, divisor);
@@ -44,10 +43,8 @@ void printDivision(char numberOne[], long long int divisor)
     int temp = numberOne[id] - '0';
     int l1 = numberLength(numberOne);
     while (temp < divisor) temp = temp * 10 + (numberOne[++id] - '0');
- 
     while (l1 > id)
     {
-
         result[counter] = (temp / divisor) + '0';
         counter++;
         temp = (temp % divisor) * 10 + numberOne[++id] - '0';
@@ -57,19 +54,16 @@ void printDivision(char numberOne[], long long int divisor)
     if (numberLength(result) == 0) printf("0\n");
     for(int i = 0; result[i] != '\0'; i++) printf("%c", result[i]);
     printf("\n");
- 
 }
 
 void printProduct(char numberOne[], char numberTwo[])
 {
-    int result[200];
+    int result[2 * g_MAX_LENGTH];
     for(int i = 0; i < 200; i++) result[i] = 0;
-    int a[101]; int b[101];
+    int a[g_MAX_LENGTH]; int b[g_MAX_LENGTH];
     int l1 = numberLength(numberOne);
-
     int l2 = numberLength(numberTwo);
  
-
     int i, j, tmp;
     for (i = l1 - 1, j = 0; i >= 0; i--, j++)
     {
