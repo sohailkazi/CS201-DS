@@ -59,7 +59,7 @@ void printDivision(char numberOne[], long long int divisor)
 void printProduct(char numberOne[], char numberTwo[])
 {
     int result[2 * g_MAX_LENGTH];
-    for(int i = 0; i < 200; i++) result[i] = 0;
+    for(int i = 0; i < g_MAX_LENGTH; i++) result[i] = 0;
     int a[g_MAX_LENGTH]; int b[g_MAX_LENGTH];
     int l1 = numberLength(numberOne);
     int l2 = numberLength(numberTwo);
